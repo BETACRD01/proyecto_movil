@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Smartphone X",
+    "description": "Potente smartphone con tecnología de punta.",
+    "price": 699,
+    "image": "img/smartphone.jpg",
+    "category": "Electrónica"
+  },
+  {
+    "name": "Laptop Pro",
+    "description": "Rendimiento profesional para tus tareas.",
+    "price": 1299,
+    "image": "img/laptop.jpg",
+    "category": "Computadoras"
+  },
+  {
+    "name": "Auriculares",
+    "description": "Calidad de sonido impresionante.",
+    "price": 199,
+    "image": "img/headphones.jpg",
+    "category": "Audio"
+  }
+]

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechStyle - Tienda Online</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="logo">TechStyle</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#productos">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#carrito">Carrito</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <h2>Bienvenido a TechStyle</h2>
+    <p>Descubre lo último en tecnología</p>
+    <button class="btn">Explorar Productos</button>
+  </section>
+
+  <!-- Productos -->
+  <section class="products-section" id="productos">
+    <h2 class="section-title">Nuestros Productos</h2>
+    <div class="product-grid" id="product-grid">
+      <!-- Tarjetas de productos -->
+      <div class="product-card">
+        <img src="img/phone.jpg" alt="Smartphone X">
+        <h3>Smartphone X</h3>
+        <p>Potente smartphone con tecnología de punta.</p>
+        <p><strong>$699 USD</strong></p>
+        <button class="btn add-to-cart">Agregar al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="img/laptop.jpg" alt="Laptop Pro">
+        <h3>Laptop Pro</h3>
+        <p>Rendimiento profesional para tus tareas.</p>
+        <p><strong>$1299 USD</strong></p>
+        <button class="btn add-to-cart">Agregar al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="img/Auriculares.jpg" alt="Auriculares">
+        <h3>Auriculares</h3>
+        <p>Calidad de sonido impresionante.</p>
+        <p><strong>$199 USD</strong></p>
+        <button class="btn add-to-cart">Agregar al Carrito</button>
+      </div>
+    </div>
+  </section>
+
+ <section id="contacto">
+  <h2 class="section-title">Contáctanos</h2>
+  <form class="contact-form" id="contact-form">
+    <div class="input-group">
+      <input type="text" id="name" placeholder="Nombre" required>
+    </div>
+    <div class="input-group">
+      <input type="email" id="email" placeholder="Correo" required>
+    </div>
+    <div class="input-group">
+      <textarea id="message" placeholder="Escribe tu mensaje" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn submit-btn">Enviar</button>
+  </form>
+</section>
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 TechStyle. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+/* General */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Gradiente azul y plateado */
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #3a8d99, #b8c8d1); /* Azul oscuro y plateado */
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-size: 28px;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #3a8d99, #b8c8d1); /* Azul y plateado */
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin: 0 0 20px;
+  animation: textGlow 3s infinite alternate;
+}
+
+.hero p {
+  font-size: 20px;
+  margin: 0 0 30px;
+  animation: fadeInUp 2s ease;
+}
+
+.hero .btn {
+  background: #00bcd4;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero .btn:hover {
+  background: #008c9e;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textGlow {
+  from {
+    text-shadow: 0 0 5px #00e0ff, 0 0 10px #00e0ff, 0 0 20px #00e0ff, 0 0 30px #00b3cc;
+  }
+  to {
+    text-shadow: 0 0 10px #00ffea, 0 0 20px #00ffea, 0 0 30px #00ffea, 0 0 40px #00cfcf;
+  }
+}
+
+/* Productos */
+.products-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  animation: fadeIn 2s;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background: linear-gradient(135deg, #3a8d99, #b8c8d1); /* Fondo con gradiente azul y plateado */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 1.5s ease;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: contain; /* Evita el recorte de la imagen */
+  background-color: #f9f9f9; /* Fondo del área de imagen */
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin: 10px 0;
+  color: #666;
+}
+
+.product-card strong {
+  font-size: 18px;
+  color: #000;
+}
+
+.product-card .btn {
+  background: #ff5722;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img:hover {
+  transform: scale(1.1);
+}
+
+.product-card .btn:hover {
+  background: #e64a19;
+  transform: scale(1.1);
+}
+
+/* Sección de Contacto */
+.contact-section {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00bcd4;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+}
+
+.contact-form button {
+  background-color: #00bcd4;
+  color: #fff;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form button:hover {
+  background-color: #008c9e;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form button i {
+  margin-right: 8px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+
+/* Fondo de la página con gradiente azul plateado */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Gradiente azul y plateado */
+  overflow-x: hidden;
+}
+
+/* Ajuste del fondo en el header para combinar con el diseño */
+header {
+  background: linear-gradient(135deg, #3a8d99, #b8c8d1); /* Azul oscuro y plateado */
+  color: #fff;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Fondo de la sección hero */
+.hero {
+  background: linear-gradient(135deg, #3a8d99, #b8c8d1); /* Azul y plateado */
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+footer {
+  background: linear-gradient(135deg, #3a8d99, #b8c8d1); /* Azul y plateado */
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+}
